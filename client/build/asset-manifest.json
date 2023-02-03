@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.bd855361.css",
-    "main.js": "/static/js/main.0dc96fab.js",
+    "main.js": "/static/js/main.519ab783.js",
     "static/media/obese.png": "/static/media/obese.0bfe1459ea95c4b99589.png",
     "static/media/hepatitis.jpeg": "/static/media/hepatitis.cee46999ebf85d3d6507.jpeg",
     "static/media/home.png": "/static/media/home.4ec4f38012153e26ec02.png",
@@ -41,10 +41,10 @@
     "static/media/Depression.avif": "/static/media/Depression.aecd1a65aacc49c62f89.avif",
     "index.html": "/index.html",
     "main.bd855361.css.map": "/static/css/main.bd855361.css.map",
-    "main.0dc96fab.js.map": "/static/js/main.0dc96fab.js.map"
+    "main.519ab783.js.map": "/static/js/main.519ab783.js.map"
   },
   "entrypoints": [
     "static/css/main.bd855361.css",
-    "static/js/main.0dc96fab.js"
+    "static/js/main.519ab783.js"
   ]
 }
