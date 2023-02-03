@@ -27,12 +27,19 @@ function Chat() {
   const [adminMessages, setAdminMessages] = useState([]);
   const navigate = useNavigate();
 
+  useEffect(() => {
+    if (currentUser === 0 || currentUser.id === 4 || currentUser.role === 1) {
+      return navigate("/");
+    }
+  }, []);
+
   const handleChange = (e) => {
     setInputs((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
   // TODOS
   const sendMessage = async () => {
+    setInputs((prev) => ({ ...prev, date: moment(Date.now()).format("YYYY-MM-DD HH:mm:ss") }));
     await axios
       .post("/chat/sendMessage", inputs, {})
       .then((response) => console.log(response));
@@ -62,8 +69,7 @@ const reRenderAdmin = async () => {
     })
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const handleSubmit = async () => {
     try {
       await sendMessage(inputs);
       document.getElementById('messageinput').value = "";
@@ -80,7 +86,7 @@ const reRenderAdmin = async () => {
     setInterval(() => {
       reRender();
       reRenderAdmin();
-    }, 10000);
+    }, 4500);
   }, []);
 
   const scrollToBottom = (id) => {
@@ -92,11 +98,23 @@ useEffect(()=> {
   scrollToBottom(`Chat`)
 })
 
+if (currentUser === 0) {
+  return navigate("/");
+}
+
+if (currentUser.id === 4) {
+  return navigate("/");
+}
+
+if (currentUser.role === 1){
+  return navigate('/');
+}
+
   return (
     <section className="p-6 bg-ally7">
       <div id="Chat" className="overflow-y-auto h-64">
         {userView.concat(adminMessages).sort((a,b) => new Date(a.date) - new Date(b.date)).map(message => (
-          <div key={message.id} className={`chat flex items-start mt-4 ${message.id === 4 ? 'justify-end' : 'justify-start'}`}>
+          <div key={message.id} className={`chat flex items-start mt-4 ${message.id === 4 ? 'justify-start' : 'justify-end'}`}>
             <div className={`chat-bubble p-3 rounded ${message.username === 'user' ? 'bg-ally10 text-white' : 'bg-ally10 text-white'}`}>
               {message.username}: {message.message}<br/>
               <p class="px-1">Sent at {new Date(message.date).toLocaleDateString()} {new Date(message.date).toLocaleTimeString()}</p>
@@ -106,7 +124,9 @@ useEffect(()=> {
       </div>
       <div className="flex justify-between mt-4">
         <input type="text" id="messageinput" name="message" className="w-3/4 p-2 border border-ally2" onChange={handleChange} />
-        <button type="submit" onClick={handleSubmit} className="p-2 border border-gray-300 bg-ally8 text-white">Send</button>
+        <button type="submit" onClick={() => {handleSubmit();
+        reRender();
+        reRenderAdmin();}} className="p-2 border border-gray-300 bg-ally8 text-white">Send</button>
       </div>
     </section>
   );

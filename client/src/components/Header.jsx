@@ -32,7 +32,7 @@ export const Header = () => {
                 </span>
               </h2>
               <p className="pr-5 mb-5 text-base allyfont text-ally3 md:text-lg">
-              Only 6% of Healthcare Profressionals in the US speak Spanish.
+              Only 6% of Healthcare Professionals in the US speak Spanish.
   100% of mentALLY Therapist and Doctors speak Spanish. We provide Spanish-speaking Healthcare Profressionals who care about you and your family's health and well-being.
               </p>
               <div className="flex items-center">

@@ -24,6 +24,7 @@ export const obtainMessage = (req, res) => {
   const values =[req.body.chatID, req.body.senderID];
 
   db.query(q, values, (err, data) => {
+    console.log(data);
     if (err) {
       console.log(err);
     }
@@ -48,6 +49,7 @@ export const obtainAdminMessage = (req, res) => {
   const values = [req.body.chatID];
 
   db.query(q, [values], (err, data) => {
+    console.log(data);
     if (data.length === 0) {
       const q = "INSERT INTO Chat(flag) VALUES ('open')";
       db.query(q, (err, data) => {
