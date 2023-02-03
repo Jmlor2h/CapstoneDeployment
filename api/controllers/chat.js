@@ -7,6 +7,14 @@ export const sendMessage = (req, res) => {
       if(data.flag === 'closed'){
         db.query("INSERT INTO Chat(flag) VALUES ('open') WHERE chat.id = ?", req.body.chatID);
       }
+      if(data.length === 0){
+        const q = "INSERT INTO Chat(flag) VALUES ('open')";
+        db.query(q, (err, data) => {
+          if(err){
+            console.log(err);
+          }
+        });
+      }
     })
 
     db.query(q, [values], (err, data) => {
@@ -51,7 +59,7 @@ export const obtainAdminMessage = (req, res) => {
   db.query(q, [values], (err, data) => {
     console.log(data);
     if (data.length === 0) {
-      const q = "INSERT INTO Chat(flag) VALUES ('open')";
+      const q = "INSERT INTO Chat VALUES ('open')";
       db.query(q, (err, data) => {
         if(err){
           console.log(err);
