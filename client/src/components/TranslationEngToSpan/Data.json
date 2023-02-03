@@ -1,0 +1,37 @@
+{ "english":{
+  "translate1": "Achieve your well-being with MyHealth360",
+  "translate2":"The goal of MiSalud360 is to improve your lifestyle. We merge medical management with a personalized Health Coaching program, where you, together with the health team, will work on the best strategies that will lead you to a healthier life.",
+    "translate3":"Educational Articles",
+    "translate4": "Basic information on diabetes, Prevent type 2 diabetes, And how to live with diabetes.",
+    "translate5": "High Blood pressure",
+    "translate6": "Learn about blood pressure, Prevention and risk factors, Treatments and therapies.",
+    "translate7": "High cholesterol",
+    "translate8": "Causes and treatments for high cholesterol.", 
+    "translate9": "Obesity", 
+    "translate10": "Treatments for overweight and obesity, How to choose healthier foods.",
+    "translate11": "Diagnosis and exams, Prevention and risk factors. Hepatitis A, Hepatitis B, and Hepatitis C.",
+    "translate12": "Cancer is not just one disease, but many. How to understand your Diagnosis.",
+    "translate13": "Our Doctors",
+    "translate14": "Our",
+    "translate15": "talented team of professionals",
+    "translate16": "We reinvented the healthcare experience for US Hispanics. All of our employed physicians speak Spanish."
+  },
+  "spanish":{
+    "translate1": "Alcanza tu bienestarcon MiSalud 360",
+    "translate2": "El objetivo de MiSalud360 es mejorar tu estilo de vida. Fusionamos el manejo médico con un programa de Health Coaching personalizado, donde tu, junto al equipo de salud, trabajarán en las mejores estrategias que te lleven a una vida más saludable.",
+    "translate3":"Artículos Educativos",
+    "translate4":  "Informacion basica de diabetes, Prevenga la diabetes tipo 2, Y como vivir con diabetes.",
+    "translate5": "Presión alta",
+    "translate6": "Entérese de presión arterial, Precención y factores de riesgo, Tratamientos y terapias.",
+    "translate7": "Colesterol alto",
+    "translate8": "Causas y tratamientos para el colesterol alto.",
+    "translate9": "Obesidad", 
+    "translate10": "Tratamientos para el sobrepeso y la obesidad, Cómo elegir alimentos más saludables.",
+    "translate11": "Entérese de presión arterial, Precención y factores de riesgo, Tratamientos y terapias.",
+    "translate12": "El cáncer no es solo una enfermedad, sino varias. Cómo comprender su Diagnóstico.",
+    "translate13": "Nuestros Doctores",
+    "translate14": "Nuestro",
+     "translate15":"talentoso equipo de Profesionales",
+    "translate16": "Reinventamos la experiencia de la atención médica para los hispanos en EE.U.U. Todos nuestros médicos empleados hablan español."
+  }
+  }
