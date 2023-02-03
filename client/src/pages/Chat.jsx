@@ -86,7 +86,7 @@ const reRenderAdmin = async () => {
     setInterval(() => {
       reRender();
       reRenderAdmin();
-    }, 2500);
+    }, 3000);
   }, []);
 
   const scrollToBottom = (id) => {
